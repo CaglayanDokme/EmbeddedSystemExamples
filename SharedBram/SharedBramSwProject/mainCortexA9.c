@@ -7,8 +7,8 @@
 
 /*** Libraries ***/
 #include "xparameters.h"	// System related parameters (produced by Vitis based on the provided XSA or HDF)
-#include "xgpio.h"			// BSP of the Xilinx AXI GPIO Controller
-#include "sleep.h"
+#include "xgpio.h"		// BSP of the Xilinx AXI GPIO Controller
+#include "sleep.h"		// Time based operations
 
 /*** Hardware Instances ***/
 XGpio leds;
