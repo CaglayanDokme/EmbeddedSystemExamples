@@ -1,1 +1,1 @@
-The Shared BRAM example design includes the Zynq PS and a Microblaze soft CPU. They interact with a shared BRAM component. Details of the system has been explained in a blog post: WILL BE ADDED
+The Shared BRAM example design includes the Zynq PS and a Microblaze soft CPU. They interact with a shared BRAM component. Details of the system has been explained in a blog post: [A Shared BRAM Example with Microblaze and Zynq PS](https://medium.com/@caglayandokme/a-shared-bram-example-with-microblaze-and-zynq-soc-949495b5f540)
