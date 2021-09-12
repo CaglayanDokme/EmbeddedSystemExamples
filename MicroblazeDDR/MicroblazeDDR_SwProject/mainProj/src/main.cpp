@@ -1,3 +1,10 @@
+/**
+ * @file 	main.cpp
+ * @brief	Main source file for the Microblaze of the MIG example project.
+ * @author	Caglayan DOKME, caglayandokme@gmail.com
+ * @date	September 12, 2021 -> Created
+ */
+
 /** Libraries **/
 #include "xparameters.h"
 #include "xuartlite.h"
