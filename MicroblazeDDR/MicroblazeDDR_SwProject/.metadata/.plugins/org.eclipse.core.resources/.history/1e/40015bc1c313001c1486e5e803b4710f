@@ -1,0 +1,36 @@
+/** Libraries **/
+#include "xparameters.h"
+#include "xuartlite.h"
+#include "xgpio.h"
+#include "sleep.h"
+
+/** Hardware Instances **/
+XGpio switches;
+XUartLite uart;
+
+int main()
+{
+	/** Initialization **/
+	if(XUartLite_Initialize(&uart, XPAR_UART_DEVICE_ID) != XST_SUCCESS)
+		while(1);
+
+	if(XGpio_Initialize(&switches, XPAR_GPIO_DEVICE_ID) != XST_SUCCESS)
+		while(1);
+
+	/** Variables **/
+	uint8_t swStatus 	= 0;				// Status of the switches
+	uint8_t txBuffer[3] = {0, '\r', '\n'};	// Message to be sent
+
+	while(1)
+	{
+		swStatus 	= XGpio_DiscreteRead(&switches, 1);
+		txBuffer[0] = swStatus;
+
+		XUartLite_Send(&uart, txBuffer, sizeof(txBuffer));
+
+		usleep(100 * 1000);
+
+		// sleep(1);	// Sleep for one second
+	}
+
+}

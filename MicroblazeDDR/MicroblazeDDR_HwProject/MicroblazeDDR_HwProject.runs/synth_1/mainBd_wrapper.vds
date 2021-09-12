@@ -1,0 +1,553 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Sep 12 15:03:22 2021
+# Process ID: 43478
+# Current directory: /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1
+# Command line: vivado -log mainBd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mainBd_wrapper.tcl
+# Log file: /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/mainBd_wrapper.vds
+# Journal file: /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source mainBd_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2017.4/data/ip'.
+Command: synth_design -top mainBd_wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 43522 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1305.777 ; gain = 74.988 ; free physical = 3299 ; free virtual = 10061
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'mainBd_wrapper' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/hdl/mainBd_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'mainBd' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:683]
+INFO: [Synth 8-638] synthesizing module 'mainBd_axi_gpio_0_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_axi_gpio_0_0' (1#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'mainBd_axi_interconnect_0_1' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1890]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_17PS11X' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:12]
+INFO: [Synth 8-638] synthesizing module 'mainBd_auto_cc_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_auto_cc_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_auto_cc_0' (2#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_auto_cc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_cc' of module 'mainBd_auto_cc_0' requires 82 connections, but only 80 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:335]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_17PS11X' (3#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:12]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1B63MPW' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:3036]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1B63MPW' (4#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:3036]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_181Q39' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:3454]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_181Q39' (5#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:3454]
+INFO: [Synth 8-638] synthesizing module 'mainBd_xbar_1' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_xbar_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_xbar_1' (6#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_xbar_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_axi_interconnect_0_1' (7#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1890]
+INFO: [Synth 8-638] synthesizing module 'mainBd_xlconstant_0_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_xlconstant_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_xlconstant_0_0' (8#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_xlconstant_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'mainBd_axi_interconnect_0_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1428]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_2WHBDF' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:418]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_2WHBDF' (9#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:418]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_19JADKY' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:550]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_19JADKY' (10#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:550]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_H755C2' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:3308]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_H755C2' (11#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:3308]
+INFO: [Synth 8-638] synthesizing module 'mainBd_xbar_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_xbar_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_xbar_0' (12#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'mainBd_xbar_0' requires 40 connections, but only 38 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1849]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_axi_interconnect_0_0' (13#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1428]
+INFO: [Synth 8-638] synthesizing module 'mainBd_axi_uartlite_0_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_axi_uartlite_0_0' (14#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'UART' of module 'mainBd_axi_uartlite_0_0' requires 22 connections, but only 21 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1166]
+INFO: [Synth 8-638] synthesizing module 'mainBd_clk_wiz_1_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_clk_wiz_1_0' (15#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'mainBd_mdm_1_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_mdm_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_mdm_1_0' (16#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_mdm_1_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'mainBd_microblaze_0_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_microblaze_0_0' (17#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'mainBd_microblaze_0_0' requires 126 connections, but only 125 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1206]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1G9R5RK' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:2802]
+INFO: [Synth 8-638] synthesizing module 'mainBd_dlmb_bram_if_cntlr_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_dlmb_bram_if_cntlr_0' (18#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'mainBd_dlmb_v10_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_dlmb_v10_0' (19#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'mainBd_dlmb_v10_0' requires 25 connections, but only 24 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:2948]
+INFO: [Synth 8-638] synthesizing module 'mainBd_ilmb_bram_if_cntlr_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_ilmb_bram_if_cntlr_0' (20#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'mainBd_ilmb_v10_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_ilmb_v10_0' (21#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'mainBd_ilmb_v10_0' requires 25 connections, but only 24 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:2994]
+INFO: [Synth 8-638] synthesizing module 'mainBd_lmb_bram_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_lmb_bram_0' (22#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'mainBd_lmb_bram_0' requires 16 connections, but only 14 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:3019]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1G9R5RK' (23#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:2802]
+INFO: [Synth 8-638] synthesizing module 'mainBd_mig_7series_0_1' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_mig_7series_0_1_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_mig_7series_0_1' (24#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_mig_7series_0_1_stub.v:5]
+WARNING: [Synth 8-350] instance 'mig_7series_0' of module 'mainBd_mig_7series_0_1' requires 64 connections, but only 58 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1354]
+INFO: [Synth 8-638] synthesizing module 'mainBd_rst_clk_wiz_1_100M_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_rst_clk_wiz_1_100M_0' (25#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_rst_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'mainBd_rst_clk_wiz_1_100M_0' requires 10 connections, but only 9 given [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:1413]
+INFO: [Synth 8-638] synthesizing module 'mainBd_util_vector_logic_0_0' [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_util_vector_logic_0_0' (26#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/realtime/mainBd_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mainBd' (27#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/synth/mainBd.v:683]
+INFO: [Synth 8-256] done synthesizing module 'mainBd_wrapper' (28#1) [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/sources_1/bd/mainBd/hdl/mainBd_wrapper.v:12]
+WARNING: [Synth 8-3331] design s00_couplers_imp_H755C2 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_H755C2 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_H755C2 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_H755C2 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_19JADKY has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_19JADKY has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_19JADKY has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_19JADKY has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_2WHBDF has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_2WHBDF has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_2WHBDF has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_2WHBDF has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_181Q39 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_181Q39 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_181Q39 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_181Q39 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1B63MPW has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1B63MPW has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1B63MPW has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1B63MPW has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_araddr[31]
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_araddr[30]
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_araddr[29]
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_araddr[28]
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_awaddr[31]
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_awaddr[30]
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_awaddr[29]
+WARNING: [Synth 8-3331] design m00_couplers_imp_17PS11X has unconnected port S_AXI_awaddr[28]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1348.309 ; gain = 117.520 ; free physical = 3307 ; free virtual = 10070
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1348.309 ; gain = 117.520 ; free physical = 3308 ; free virtual = 10070
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp17/mainBd_microblaze_0_0_in_context.xdc] for cell 'mainBd_i/microblaze_0'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp17/mainBd_microblaze_0_0_in_context.xdc] for cell 'mainBd_i/microblaze_0'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp18/mainBd_mdm_1_0_in_context.xdc] for cell 'mainBd_i/mdm_1'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp18/mainBd_mdm_1_0_in_context.xdc] for cell 'mainBd_i/mdm_1'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp19/mainBd_clk_wiz_1_0_in_context.xdc] for cell 'mainBd_i/clk_wiz_1'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp19/mainBd_clk_wiz_1_0_in_context.xdc] for cell 'mainBd_i/clk_wiz_1'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp20/mainBd_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mainBd_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp20/mainBd_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mainBd_i/rst_clk_wiz_1_100M'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp21/mainBd_xlconstant_0_0_in_context.xdc] for cell 'mainBd_i/NoReset'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp21/mainBd_xlconstant_0_0_in_context.xdc] for cell 'mainBd_i/NoReset'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp22/mainBd_dlmb_v10_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp22/mainBd_dlmb_v10_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp23/mainBd_dlmb_v10_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp23/mainBd_dlmb_v10_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp24/mainBd_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp24/mainBd_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp25/mainBd_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp25/mainBd_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp26/mainBd_lmb_bram_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp26/mainBd_lmb_bram_0_in_context.xdc] for cell 'mainBd_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp27/mainBd_axi_gpio_0_0_in_context.xdc] for cell 'mainBd_i/GPIO'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp27/mainBd_axi_gpio_0_0_in_context.xdc] for cell 'mainBd_i/GPIO'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp28/mainBd_axi_uartlite_0_0_in_context.xdc] for cell 'mainBd_i/UART'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp28/mainBd_axi_uartlite_0_0_in_context.xdc] for cell 'mainBd_i/UART'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp29/mainBd_xbar_1_in_context.xdc] for cell 'mainBd_i/MemoryInterconnect/xbar'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp29/mainBd_xbar_1_in_context.xdc] for cell 'mainBd_i/MemoryInterconnect/xbar'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp30/mainBd_xbar_0_in_context.xdc] for cell 'mainBd_i/PeripheralInterconnect/xbar'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp30/mainBd_xbar_0_in_context.xdc] for cell 'mainBd_i/PeripheralInterconnect/xbar'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc] for cell 'mainBd_i/mig_7series_0'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc] for cell 'mainBd_i/mig_7series_0'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp32/mainBd_util_vector_logic_0_0_in_context.xdc] for cell 'mainBd_i/util_vector_logic_0'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp32/mainBd_util_vector_logic_0_0_in_context.xdc] for cell 'mainBd_i/util_vector_logic_0'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp33/mainBd_auto_cc_0_in_context.xdc] for cell 'mainBd_i/MemoryInterconnect/m00_couplers/auto_cc'
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp33/mainBd_auto_cc_0_in_context.xdc] for cell 'mainBd_i/MemoryInterconnect/m00_couplers/auto_cc'
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/constrs_1/new/ArtyA7.xdc]
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/constrs_1/new/ArtyA7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/constrs_1/new/ArtyA7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mainBd_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mainBd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1682.965 ; gain = 0.000 ; free physical = 3080 ; free virtual = 9838
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mainBd_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3166 ; free virtual = 9926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3166 ; free virtual = 9926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp19/mainBd_clk_wiz_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp19/mainBd_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[10]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[10]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[11]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[11]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[12]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[12]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[13]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[13]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[2]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[2]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[3]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[3]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[4]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[4]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[5]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[5]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[6]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[6]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[7]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[7]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[8]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[8]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_addr[9]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_addr[9]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_ba[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_ba[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_ba[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_ba[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_ba[2]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_ba[2]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_cas_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_cas_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_ck_n[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_ck_n[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_ck_p[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_ck_p[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_cke[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_cke[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_cs_n[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_cs_n[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dm[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dm[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dm[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dm[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[10]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[10]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[11]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[11]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[12]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[12]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[13]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[13]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[14]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[14]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[15]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[15]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[2]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[2]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[3]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[3]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[4]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[4]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[5]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[5]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[6]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[6]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[7]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[7]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[8]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[8]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dq[9]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dq[9]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dqs_n[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dqs_n[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dqs_n[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dqs_n[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dqs_p[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dqs_p[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_dqs_p[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_dqs_p[1]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_odt[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_odt[0]. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_ras_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_ras_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_reset_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_reset_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR3_0_we_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR3_0_we_n. (constraint file  /home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/.Xil/Vivado-43478-PC-Caglayan/dcp31/mainBd_mig_7series_0_1_in_context.xdc, line 97).
+Applied set_property DONT_TOUCH = true for mainBd_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/GPIO. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/MemoryInterconnect. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/MemoryInterconnect/m00_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/MemoryInterconnect/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/NoReset. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/PeripheralInterconnect. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/PeripheralInterconnect/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/UART. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/mdm_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/microblaze_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/mig_7series_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mainBd_i/util_vector_logic_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3166 ; free virtual = 9926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3167 ; free virtual = 9927
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_1 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_1 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_1 has unconnected port S01_ACLK
+WARNING: [Synth 8-3331] design mainBd_axi_interconnect_0_1 has unconnected port S01_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3158 ; free virtual = 9918
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'mainBd_i/mdm_1/Dbg_Clk_0' to pin 'mainBd_i/mdm_1/bbstub_Dbg_Clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'mainBd_i/mdm_1/Dbg_Update_0' to pin 'mainBd_i/mdm_1/bbstub_Dbg_Update_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'mainBd_i/clk_wiz_1/clk_out1' to pin 'mainBd_i/clk_wiz_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'mainBd_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'mainBd_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'mainBd_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'mainBd_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'mainBd_i/mig_7series_0/ui_clk' to pin 'mainBd_i/mig_7series_0/bbstub_ui_clk/O'
+INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3037 ; free virtual = 9797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3037 ; free virtual = 9797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |mainBd_xbar_1                |         1|
+|2     |mainBd_auto_cc_0             |         1|
+|3     |mainBd_xbar_0                |         1|
+|4     |mainBd_axi_gpio_0_0          |         1|
+|5     |mainBd_xlconstant_0_0        |         1|
+|6     |mainBd_axi_uartlite_0_0      |         1|
+|7     |mainBd_clk_wiz_1_0           |         1|
+|8     |mainBd_mdm_1_0               |         1|
+|9     |mainBd_microblaze_0_0        |         1|
+|10    |mainBd_mig_7series_0_1       |         1|
+|11    |mainBd_rst_clk_wiz_1_100M_0  |         1|
+|12    |mainBd_util_vector_logic_0_0 |         1|
+|13    |mainBd_dlmb_bram_if_cntlr_0  |         1|
+|14    |mainBd_dlmb_v10_0            |         1|
+|15    |mainBd_ilmb_bram_if_cntlr_0  |         1|
+|16    |mainBd_ilmb_v10_0            |         1|
+|17    |mainBd_lmb_bram_0            |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------+------+
+|      |Cell                         |Count |
++------+-----------------------------+------+
+|1     |mainBd_auto_cc_0             |     1|
+|2     |mainBd_axi_gpio_0_0          |     1|
+|3     |mainBd_axi_uartlite_0_0      |     1|
+|4     |mainBd_clk_wiz_1_0           |     1|
+|5     |mainBd_dlmb_bram_if_cntlr_0  |     1|
+|6     |mainBd_dlmb_v10_0            |     1|
+|7     |mainBd_ilmb_bram_if_cntlr_0  |     1|
+|8     |mainBd_ilmb_v10_0            |     1|
+|9     |mainBd_lmb_bram_0            |     1|
+|10    |mainBd_mdm_1_0               |     1|
+|11    |mainBd_microblaze_0_0        |     1|
+|12    |mainBd_mig_7series_0_1       |     1|
+|13    |mainBd_rst_clk_wiz_1_100M_0  |     1|
+|14    |mainBd_util_vector_logic_0_0 |     1|
+|15    |mainBd_xbar_0                |     1|
+|16    |mainBd_xbar_1                |     1|
+|17    |mainBd_xlconstant_0_0        |     1|
+|18    |IBUF                         |     5|
+|19    |OBUF                         |     1|
++------+-----------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------+--------------------------------------+------+
+|      |Instance                      |Module                                |Cells |
++------+------------------------------+--------------------------------------+------+
+|1     |top                           |                                      |  1956|
+|2     |  mainBd_i                    |mainBd                                |  1950|
+|3     |    MemoryInterconnect        |mainBd_axi_interconnect_0_1           |   456|
+|4     |      m00_couplers            |m00_couplers_imp_17PS11X              |   202|
+|5     |    PeripheralInterconnect    |mainBd_axi_interconnect_0_0           |   263|
+|6     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1G9R5RK |   496|
++------+------------------------------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3036 ; free virtual = 9796
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.965 ; gain = 117.520 ; free physical = 3091 ; free virtual = 9851
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1682.965 ; gain = 452.176 ; free physical = 3093 ; free virtual = 9853
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1682.965 ; gain = 465.559 ; free physical = 3074 ; free virtual = 9834
+INFO: [Common 17-1381] The checkpoint '/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.runs/synth_1/mainBd_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mainBd_wrapper_utilization_synth.rpt -pb mainBd_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1682.965 ; gain = 0.000 ; free physical = 3071 ; free virtual = 9832
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 12 15:04:09 2021...
