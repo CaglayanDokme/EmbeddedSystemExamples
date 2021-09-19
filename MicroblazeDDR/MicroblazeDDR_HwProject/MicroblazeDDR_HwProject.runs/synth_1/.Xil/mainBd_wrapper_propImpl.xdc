@@ -1,7 +1,0 @@
-set_property SRC_FILE_INFO {cfile:/home/caglayan/Desktop/Workspaces/WS_Vivado/MicroblazeDDR/MicroblazeDDR.srcs/constrs_1/new/ArtyA7.xdc rfile:../../../MicroblazeDDR.srcs/constrs_1/new/ArtyA7.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN B11 [get_ports UART_txd]
-set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN A11 [get_ports UART_rxd]
-set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN E3 [get_ports clk]
