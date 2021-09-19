@@ -35,7 +35,7 @@ start_gui
 set script_path [file dirname [file normalize [info script]]]
 
 # Create a project with part
-create_project $project_name $script_path -part $partName
+create_project $projectName $script_path -part $partName
 
 # Set the part that will be used in project
 set_property board_part $boardPartName [current_project]
@@ -61,8 +61,8 @@ if {[info exists blockDesigName]} {
     source $script_path/${blockDesigName}.tcl
 
     # Create and add an HDL wrapper for the block design
-    make_wrapper -files [get_files $script_path/${project_name}.srcs/sources_1/bd/${blockDesigName}/${blockDesigName}.bd] -top
-    add_files -norecurse $script_path/${project_name}.srcs/sources_1/bd/${blockDesigName}/hdl/${blockDesigName}_wrapper.v
+    make_wrapper -files [get_files $script_path/${projectName}.srcs/sources_1/bd/${blockDesigName}/${blockDesigName}.bd] -top
+    add_files -norecurse $script_path/${projectName}.srcs/sources_1/bd/${blockDesigName}/hdl/${blockDesigName}_wrapper.v
 }
 
 # Import the constraint file to the project
