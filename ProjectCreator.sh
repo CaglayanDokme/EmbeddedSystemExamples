@@ -2,7 +2,7 @@
 # Brief     : This is a shell script file for invoking the Vivado and initially run a tickle file in it
 # Date      : September 19, 2020
 # Note      : User must specify a valid tickle file name
-# Author    : Caglayan DOKME, caglayan.dokme@gmail.com
+# Author    : Caglayan DOKME, caglayandokme@gmail.com
 # Usage     : User can either modify the script file to invoke the Vivado with a custom TCL file
 #           : or give the TCL file as an input argument(Better with full path)
 #           : The Vivado application version and installiation path can vary for hos devices
