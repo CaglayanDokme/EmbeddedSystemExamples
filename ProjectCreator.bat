@@ -3,7 +3,7 @@
 ::			: It's been tested in both Windows 7 and Windows 10
 :: Note		: User must specify a valid tickle file name
 ::			: Do not forget to modify the Vivado version also
-:: Author 	: Caglayan DOKME, caglayan.dokme@gmail.com
+:: Author 	: Caglayan DOKME, caglayandokme@gmail.com
 :: Date		: September 13, 2020
 
 @ECHO OFF
