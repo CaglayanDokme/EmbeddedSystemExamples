@@ -1,12 +1,13 @@
 /**
- * @brief	  Main software file for using Zynq PS GPIO on Zedboard
- * @author	Caglayan DOKME, caglayandokme@gmail.com
- * @date	  September 24, 2021 -> Created
+ * @brief	  	Main software file for using Zynq PS GPIO on Zedboard
+ * @author		Caglayan DOKME, caglayandokme@gmail.com
+ * @date	  	September 24, 2021 -> Created
  */
-  
+
  /** Libraries **/
 #include "xparameters.h"
 #include "xgpiops.h"
+#include "xscugic.h"
 #include "sleep.h"
 #include <stdio.h>
 
@@ -31,6 +32,50 @@
 
 /** Hardware Instances **/
 XGpioPs gpio;
+XScuGic gic;
+
+/** Global Variables **/
+volatile bool b_gpioIrqFlag = false;
+
+void GpioIrqHandler(void* arguments)
+{
+	b_gpioIrqFlag = true;
+}
+
+void InitGic()
+{
+	uint32_t errCode = 0;
+
+	// Find the related configuration
+	XScuGic_Config* config = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+
+	// Check if the configuration is found
+	if(nullptr == config)
+		while(1);
+
+	// Initialize the driver using the given configuration
+	errCode = XScuGic_CfgInitialize(&gic, config, config->CpuBaseAddress);
+	if(XST_SUCCESS != errCode)
+		while(1);
+
+	errCode = XScuGic_SelfTest(&gic);
+	if(XST_SUCCESS != errCode)
+		while(1);
+
+	Xil_ExceptionInit();
+
+	// Connect the IRQ controller handler to the hardware interrupt handling logic
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, Xil_ExceptionHandler(XScuGic_InterruptHandler), &gic);
+
+	// Connect the PS GPIO device driver handler to the PS GPIO interrupt
+	XScuGic_Connect(&gic, XPS_GPIO_INT_ID, Xil_ExceptionHandler(XGpioPs_IntrHandler), &gpio);
+
+	// Enable the interrupt from PS GPIO device
+	XScuGic_Enable(&gic, XPS_GPIO_INT_ID);
+
+	// Enable interrupts on the processor
+	Xil_ExceptionEnableMask(XIL_EXCEPTION_IRQ);
+}
 
 void InitGpio()
 {
@@ -70,6 +115,15 @@ void InitGpio()
 	XGpioPs_SetDirectionPin(&gpio, PIN_JE8,  TYPE_INPUT);
 	XGpioPs_SetDirectionPin(&gpio, PIN_JE9,  TYPE_INPUT);
 	XGpioPs_SetDirectionPin(&gpio, PIN_JE10, TYPE_INPUT);
+
+	// Declare pins that will generate interrupt
+	XGpioPs_SetIntrTypePin(&gpio, PIN_JE7, XGPIOPS_IRQ_TYPE_EDGE_RISING);
+
+	// Declare a callback function for the PS GPIO interrupt
+	XGpioPs_SetCallbackHandler(&gpio, &gpio, (XGpioPs_Handler)GpioIrqHandler);
+
+	// Enable the interrupt generation of PS GPIO
+	XGpioPs_IntrEnablePin(&gpio, PIN_JE7);
 }
 
 void UpdateOutput(const uint8_t value)
@@ -132,6 +186,13 @@ void LogInput()
 	else
 		printf("JE10 is LOW");
 
+	if(b_gpioIrqFlag)
+	{
+		b_gpioIrqFlag = false;
+
+		printf("JE7 Rising Edge IRQ occurred!");
+	}
+
 	printf("\r\n\r\n");
 }
 
@@ -139,6 +200,7 @@ int main()
 {
 	// Initialize the GPIO driver
 	InitGpio();
+	InitGic();
 
 	// Application loop
 	while(1)
