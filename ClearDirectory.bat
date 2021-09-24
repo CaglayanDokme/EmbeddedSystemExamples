@@ -117,4 +117,21 @@ if exist %baseName%.xpr (
     del %baseName%.xpr
 )
 
+:: Delete the .sdk folder only if it is empty
+if exist %baseName%.sdk\ (
+	dir /A /B "%baseName%.sdk\" | findstr /R ".">NUL && GOTO SKIP_SDK
+	
+:DELETE_SDK
+    echo sdk folder deleted!
+    
+    rmdir /s/q %baseName%.sdk
+	
+	goto EXIT_IF
+	
+:SKIP_SDK
+	echo SDK folder was not empty, hence it's not deleted.
+)
+:EXIT_IF
 
+echo Script finished
+	
