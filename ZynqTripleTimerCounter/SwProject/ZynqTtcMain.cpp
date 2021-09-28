@@ -2,6 +2,8 @@
  * @brief	Main software file for the Zynq Triple Timer Counter example project.
  * @author	Caglayan DOKME, caglayandokme@gmail.com
  * @date	September 27, 2021 -> Created
+ * 			September 28, 2021 -> PWM signal generation added.
+ *
  */
 
 /** Libraries **/
@@ -12,6 +14,7 @@
 
 /** Definitions **/
 #define TTC0_FREQ_HZ		1
+#define TTC1_FREQ_HZ		(1 * 1000)
 
 /** Custom Structures **/
 struct TmrCntrSetup{
@@ -21,13 +24,27 @@ struct TmrCntrSetup{
 	uint8_t 	prescaler	= 0;
 };
 
+struct TmrPwmSetup : TmrCntrSetup{
+	uint16_t matchValue = 0;
+
+	void CalcSetMatchValue(float dutyCycle)
+	{
+		if(0 == interval)
+			while(1);
+
+		matchValue = uint16_t(float(interval) * dutyCycle);
+	}
+};
+
 /** Hardware Instances **/
-XTtcPs 	timerTtc0;
+XTtcPs 	timerTtc0,	// Periodic event generation
+		timerTtc1;	// PWM signal generation
 XScuGic gic;
 
 /** Global Variables **/
-TmrCntrSetup timerTtc0Setup;
-volatile bool b_timerTtc0Expired = false;
+TmrCntrSetup 	timerTtc0Setup;
+TmrPwmSetup		timerTtc1Setup;
+volatile bool 	b_timerTtc0Expired = false;
 
 void TimerIrqHandler(void* arguments)
 {
@@ -139,14 +156,81 @@ void InitTimerTtc0()
 	 * If enabled, an interrupt signal can be generated at each overflow(underflow) of the counter.	 */
 }
 
+void InitTimerTtc1()
+{
+
+	uint32_t errCode = 0;
+
+	// Find the related configuration
+	XTtcPs_Config* config = XTtcPs_LookupConfig(XPAR_PS7_TTC_1_DEVICE_ID);
+
+	// Check if the configuration is found
+	if(nullptr == config)
+		while(1);
+
+	// Initialize the driver using the given configuration
+	errCode = XTtcPs_CfgInitialize(&timerTtc1, config, config->BaseAddress);
+	if(XST_SUCCESS != errCode)
+		while(1);
+
+	// Self-test initially
+	errCode = XTtcPs_SelfTest(&timerTtc1);
+	if(XST_SUCCESS != errCode)
+		while(1);
+
+	timerTtc1Setup.frequency 	= TTC1_FREQ_HZ;
+	timerTtc1Setup.options 		= XTTCPS_OPTION_INTERVAL_MODE | XTTCPS_OPTION_MATCH_MODE | XTTCPS_OPTION_WAVE_POLARITY;
+
+	// Apply selected options
+	errCode = XTtcPs_SetOptions(&timerTtc1, timerTtc1Setup.options);
+	if(XST_SUCCESS != errCode)
+		while(1);
+
+	// Let the driver calculate required interval and prescaler values using the given frequency
+	XTtcPs_CalcIntervalFromFreq(&timerTtc1, timerTtc1Setup.frequency, &timerTtc1Setup.interval, &timerTtc1Setup.prescaler);
+
+	// Upon a failure during calculations, the values are set to their highest possible limit
+	if((XTTCPS_MAX_INTERVAL_COUNT == timerTtc1Setup.interval) || (0xFF == timerTtc1Setup.prescaler))
+		while(1);
+
+	// Set interval and prescaler using the given values
+	XTtcPs_SetInterval(&timerTtc1, timerTtc1Setup.interval);
+	XTtcPs_SetPrescaler(&timerTtc1, timerTtc1Setup.prescaler);
+
+	// Calculate a PWM match value using the duty cycle
+	timerTtc1Setup.CalcSetMatchValue(0.63);
+	if(0 == timerTtc1Setup.matchValue)
+		while(1);
+
+	// Apply the calculated match value
+	XTtcPs_SetMatchValue(&timerTtc1, 0, timerTtc1Setup.matchValue);
+	if(XTtcPs_GetMatchValue(&timerTtc1, 0) != timerTtc1Setup.matchValue)
+		while(1);
+
+	/* Details of Operation:
+	 * Each timer in each TTC device has three different match values.
+	 * Each match value can be used to generate interrupts.
+	 * In timer1 of the TTC0 device, we use the match 0 to generate a PWM signal.
+	 *
+	 * The match 0 is special as it has the ability to generate a waveform if the
+	 * XTTCPS_OPTION_WAVE_POLARITY is marked at TTC device options.
+	 * The other match values doesn't have this feature.
+	 *
+	 * Frequency represents the PWM window frequency.
+	 * Interval is the resolution of a single PWM window.
+	 * Lastly, the match value is equal to the (dutyCycle * interval) */
+}
+
 int main()
 {
 	// Setup the system
 	InitTimerTtc0();
+	InitTimerTtc1();
 	InitGic();
 
-	// Start the timer
+	// Start the timers
 	XTtcPs_Start(&timerTtc0);
+	XTtcPs_Start(&timerTtc1);
 
 	// Application loop
 	while(1)
